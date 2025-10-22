@@ -1,0 +1,21 @@
+package day1;
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Steve", 6);
+        Dog dog2 = new Dog("Coco", 9);
+
+        dog2.bark(12);
+        dog1.eat("Chicken Tacos");
+        dog2.eat("People Food");
+        
+        System.out.println(dog1);
+        System.out.println(dog2);
+        
+        dog1 = dog2;
+
+        System.out.println(dog1);
+        System.out.println(dog2);
+
+    }
+}
