@@ -32,11 +32,11 @@ public class Conversions {
         String digits = "0123456789ABCDEF";
         int value = 0;
 
-        for (int i = 0; i < number.length(); i++) {
+        for (int i = number.length()-1; i >= 0; i--) {
             String ch = number.substring(i, i + 1); // already uppercase
             int digit = digits.indexOf(ch); // 0..15 or -1
 
-            value = value * base + digit;
+            value += digit * Math.pow(base,number.length()-i-1);
         }
 
         return value;
